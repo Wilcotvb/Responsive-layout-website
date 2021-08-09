@@ -130,6 +130,10 @@ sup {
   vertical-align: baseline;
 }
 
+h4 {
+  display: inherit;
+}
+
 sub {
   bottom: -0.25em;
 }
@@ -353,8 +357,8 @@ template {
 
 ol,
 ul {
-  margin: 0px;
-  padding; 0px;
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 

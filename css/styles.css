@@ -1,49 +1,97 @@
 /* Global Layout Set-up Mobile First */
 body {
   font-family: 'Montserrat', sans-serif;
-  width: 60%;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 100%;
   margin: 0 auto;
+  line-height: 1.25rem;
 }
 
-
-
-/* V1
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  padding: 0;
+.container {
+  width: 90%;
+  margin: 0 auto;
   text-align: center;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 10rem
-  background-color: #FAFAFA;
-  width: 80%
-}
-
-nav {
-  color: black;
-  font-weight: 700;
-}
-
-ul {
-    list-style-type: none;
-    display: inline-block;
-    flex-direction: column;
-    align-items: center;
-    flex-grow: 1 100%;
 }
 
 li {
-  display: flex;
-  padding: 10px;
-  background-color: white;
-  flex-grow: 1 100%;
-  width: 100%
+  font-weight: 300;
 }
 
-a, a:visited, a:hover, a:active {
-    text-decoration: none;
-    color: inherit;
+nav li {
+  background-color: white;
+  margin: 5px 0px 5px 0px;
+  padding: 5px 0px 5px 0px;
+  font-weight: 700;
+}
+
+img{
+  max-width:100%;
+  max-height:100%;
+}
+
+p {
+  font-size: 1rem;
+  margin: 10px 0px 30px 0px;
+}
+h2 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+h4 {
+  text-transform: uppercase;
+}
+
+hr.solid {
+  border-top: 1px solid #bbb;
+  width: 90%;
+}
+
+a {
+  font-weight: bold;
+}
+
+.main-header {
+  background-color: #fafafa;
+  padding-bottom: 20px;
+}
+
+.main-footer {
+  background-color: #fafafa;
+  padding-top: 30px;
+  line-height: 1rem;
+  min-height: 50vw;
+}
+
+.portfolio {
+  margin-top: 50px;
+}
+
+.img-profile {
+  margin-top: 25px;
+  max-width: 70%
+}
+
+/* When I change the width of this div the alignment is off, even with align-items. Fixed it with margin but not ideal */
+.bottom-bar {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.contact-details {
+  line-height: 0.12rem;
+}
+.skills {
+ min-height:100%;
+ background:linear-gradient(20deg, rgba(0, 0, 0, 0.4), rgba(255, 0, 150, 0.5)), url("/Users/dlvx/Desktop/PROJECTS TECHDEGREE/Responsive-layout-website/Responsive-layout-website/images/skills.png");
+ background-size:cover;
+ color: white;
+ padding-bottom: 30px;
 }
