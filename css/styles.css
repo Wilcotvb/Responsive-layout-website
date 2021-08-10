@@ -19,10 +19,14 @@ li {
   font-weight: 300;
 }
 
+nav {
+  margin-top: 40px;
+}
+
 nav li {
   background-color: white;
   margin: 5px 0px 5px 0px;
-  padding: 5px 0px 5px 0px;
+  padding: 10px 0px 10px 0px;
   font-weight: 700;
 }
 
@@ -48,6 +52,7 @@ h4 {
 hr.solid {
   border-top: 1px solid #bbb;
   width: 90%;
+  margin-top: 100px;
 }
 
 a {
@@ -95,3 +100,6 @@ a {
  color: white;
  padding-bottom: 30px;
 }
+
+
+/* Media Queries */
