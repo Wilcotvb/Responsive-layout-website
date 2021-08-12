@@ -1,12 +1,9 @@
 /* Global Layout Set-up Mobile First */
 body {
   font-family: 'Montserrat', sans-serif;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
   width: 100%;
   margin: 0 auto;
-  line-height: 1.25rem;
+  box-sizing: border-box;
 }
 
 .container {
@@ -15,6 +12,7 @@ body {
   text-align: center;
 }
 
+/* Global Item Styles */
 li {
   font-weight: 300;
 }
@@ -39,12 +37,19 @@ p {
   font-size: 1rem;
   margin: 10px 0px 30px 0px;
 }
+
+h1 {
+  margin: 0;
+  padding-top: 20px;
+}
+
 h2 {
   font-size: 1rem;
   text-transform: uppercase;
   margin-top: 30px;
   margin-bottom: 30px;
 }
+
 h4 {
   text-transform: uppercase;
 }
@@ -59,6 +64,7 @@ a {
   font-weight: bold;
 }
 
+/* Main Classes Styles */
 .main-header {
   background-color: #fafafa;
   padding-bottom: 20px;
@@ -71,13 +77,9 @@ a {
   min-height: 50vw;
 }
 
+/* Sections Classes Styles */
 .portfolio {
   margin-top: 50px;
-}
-
-.img-profile {
-  margin-top: 25px;
-  max-width: 70%
 }
 
 /* When I change the width of this div the alignment is off, even with align-items. Fixed it with margin but not ideal */
@@ -90,16 +92,41 @@ a {
   margin-left: 5%;
   margin-right: 5%;
 }
+
 .contact-details {
   line-height: 0.12rem;
 }
+
 .skills {
  min-height:100%;
- background:linear-gradient(20deg, rgba(0, 0, 0, 0.4), rgba(255, 0, 150, 0.5)), url("/Users/dlvx/Desktop/PROJECTS TECHDEGREE/Responsive-layout-website/Responsive-layout-website/images/skills.png");
+ background:linear-gradient(20deg, rgba(0, 0, 0, 0.4), rgba(255, 0, 150, 0.5)), url("/Users/dlvx/Desktop/Techdegree/Responsive-layout-website/Responsive-layout-website/images/skills.png");
  background-size:cover;
  color: white;
  padding-bottom: 30px;
 }
 
+/* Seperate Elements Styles */
+.img-profile {
+  margin-top: 25px;
+  max-width: 70%
+}
 
 /* Media Queries */
+
+@media (min-width: 769px) {
+  /* For tablets: */
+  .main-header, nav {
+  display: flex;
+  width: auto;
+  flex-direction: row;
+  flex-grow: 1;
+  }
+
+  nav {
+
+  }
+
+  h1 {
+    color: green;
+  }
+  }
