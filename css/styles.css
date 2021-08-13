@@ -24,23 +24,24 @@ nav {
 nav li {
   background-color: white;
   margin: 5px 0px 5px 0px;
-  padding: 10px 0px 10px 0px;
+  padding: 10px;
   font-weight: 700;
 }
 
 img{
   max-width:100%;
   max-height:100%;
+  border-radius: 15px;
 }
 
 p {
-  font-size: 1rem;
+  font-size: 1em;
   margin: 10px 0px 30px 0px;
 }
 
 h1 {
   margin: 0;
-  padding-top: 20px;
+  padding-top: 40px;
 }
 
 h2 {
@@ -66,67 +67,169 @@ a {
 
 /* Main Classes Styles */
 .main-header {
-  background-color: #fafafa;
+  background-color: #FECEA8;
   padding-bottom: 20px;
 }
 
 .main-footer {
-  background-color: #fafafa;
+  background-color: #FECEA8;
   padding-top: 30px;
   line-height: 1rem;
-  min-height: 50vw;
 }
 
 /* Sections Classes Styles */
 .portfolio {
-  margin-top: 50px;
+  margin-top: 70px;
+  padding-bottom: 70px;
 }
 
+
+}
 /* When I change the width of this div the alignment is off, even with align-items. Fixed it with margin but not ideal */
+
+
+.contact-details {
+  line-height: 0.12rem;
+  margin-top: 3em;
+}
+
+.skills {
+ height: 180px;
+ margin: auto;
+ background:linear-gradient(0deg, rgba(254, 206, 168, 0.2), rgba(254, 206, 168, 0.7)), url("/Users/dlvx/Desktop/Techdegree/Responsive-layout-website/Responsive-layout-website/images/skills.png");
+ background-size:cover;
+ color: white;
+ padding: 30px 0 30px 0;
+}
+
 .bottom-bar {
   display: flex;
   flex-grow: 1;
   flex-direction: row;
   justify-content: space-between;
-  text-align: center;
   margin-left: 5%;
   margin-right: 5%;
-}
-
-.contact-details {
-  line-height: 0.12rem;
-}
-
-.skills {
- min-height:100%;
- background:linear-gradient(20deg, rgba(0, 0, 0, 0.4), rgba(255, 0, 150, 0.5)), url("/Users/dlvx/Desktop/Techdegree/Responsive-layout-website/Responsive-layout-website/images/skills.png");
- background-size:cover;
- color: white;
- padding-bottom: 30px;
 }
 
 /* Seperate Elements Styles */
 .img-profile {
   margin-top: 25px;
-  max-width: 70%
+  max-width: 70%;
+  border-radius: 20px;
 }
+
+.intro-section p {
+font-size: 1.25em;
+line-height: 1.5em;
+}
+
+.main-header h1 {
+  font-family: 'Windsong', sans-serif;
+}
+/* Nav only visible on +769px */
+.second-nav {
+  display: none;
+}
+
 
 /* Media Queries */
 
-@media (min-width: 769px) {
+@media (min-width: 769px){
   /* For tablets: */
-  .main-header, nav {
-  display: flex;
-  width: auto;
-  flex-direction: row;
-  flex-grow: 1;
-  }
+      .main-header, .nav {
+      display: flex;
+      margin: auto;
+      flex-direction: row;
+      justify-content: center;
+      flex-grow: 1;
+      }
 
-  nav {
+      .intro-section {
+      display: flex;
+      text-align: left;
+      flex-direction: row-reverse;
+      font-size: 2em;
+      align-items: flex-start;
+      padding-bottom: 40px;
+      }
 
-  }
+      .intro-section p {
+      font-size: 0.6em;
+      margin-top: 0;
+      margin-right: 25px;
+      flex-grow: 2;
+      }
 
-  h1 {
-    color: green;
-  }
+      .row {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 30px 15px;
+      }
+
+      .item {
+        flex: 1 0 40%;
+      }
+
+      .img-profile {
+      margin-top: 0;
+      max-width: 40%;
+      flex-grow: -1;
+      }
+
+      nav li {
+        background-color: inherit;
+        margin: 0 20px 40px 20px;
+      }
+
+      .back-to-top-link {
+        display: none;
+      }
+
+      h1 {
+        color: #F67280;
+      }
+
+      .second-nav {
+        display: flex;
+        margin: 0;
+      }
+
+      .footer-nav-ul {
+        font-size: 0.7em;
+        display: flex;
+        margin: 15px 5px 0 5px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        }
+
+      .contact {
+      margin-left: 15%;
+      margin-right: 15%;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      /* For desktop: */
+      .main-header .main-top {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-grow: 1;
+      }
+
+      .nav {
+        display: flex;
+        }
+
+        nav li {
+          margin: 0 20px 40px 20px;
+        }
+
+        .item {
+          flex: 1 0 30%;
+        }
   }
